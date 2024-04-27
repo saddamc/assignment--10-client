@@ -1,23 +1,33 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 // import userProfilePic from "../../assets/user.png";
 
 
 const Navbar = () => {
 
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch()
+    }
+
+
 
     const navLinks = <>
         <li className="bg-rgb(255,81,70)"> <NavLink to="/">Home</NavLink> </li>
         <li className="bg-rgb(255,81,70)"> <NavLink to="/product">Product</NavLink> </li>
-        <li className="bg-rgb(255,81,70)"> <NavLink to="/addproduct">Add Product</NavLink> </li>
-        <li className=""> <NavLink to="/mycart">My Cart</NavLink> </li>
 
-        {/* {
+        {
             user &&
             <>
-                
+                <li className="bg-rgb(255,81,70)"> <NavLink to="/addproduct">Add Product</NavLink> </li>
+                <li className=""> <NavLink to="/mycart">My Cart</NavLink> </li>
 
             </>
-        } */}
+        }
 
         <li> <NavLink to="/login">Login</NavLink> </li>
         <li> <NavLink to="/Register">Register</NavLink> </li>
@@ -49,24 +59,20 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end ">
 
-                    {/* {
-                        user ?
-                            <Link to="/">
-                                <div className="flex items-center">
-                                    <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                        <div className="w-10 rounded-full">
-                                            <img alt="Tailwind CSS Navbar component" src={userProfilePic} />
-                                        </div>
+                    {
+                        user &&
+                        <Link to="/">
+                            <div className="flex items-center">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                                     </div>
-                                    <button className="login-button p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
                                 </div>
-                            </Link>
-                            :
-                            <Link to="/login">
+                                <button onClick={handleLogout} className="login-button p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
+                            </div>
+                        </Link>
 
-                                <button className="login-button p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Login</button>
-                            </Link>
-                    } */}
+                    }
 
                 </div>
             </div>
