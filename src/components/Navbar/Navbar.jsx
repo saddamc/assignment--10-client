@@ -9,7 +9,7 @@ const Navbar = () => {
         <li className="bg-rgb(255,81,70)"> <NavLink to="/">Home</NavLink> </li>
         <li className="bg-rgb(255,81,70)"> <NavLink to="/product">Product</NavLink> </li>
         <li className="bg-rgb(255,81,70)"> <NavLink to="/addproduct">Add Product</NavLink> </li>
-        <li className="hide"> <NavLink to="/mycart">My Cart</NavLink> </li>
+        <li className=""> <NavLink to="/mycart">My Cart</NavLink> </li>
 
         {/* {
             user &&
@@ -18,13 +18,14 @@ const Navbar = () => {
 
             </>
         } */}
+
         <li> <NavLink to="/login">Login</NavLink> </li>
         <li> <NavLink to="/Register">Register</NavLink> </li>
     </>
 
     return (
-        <div className="navbar font-fira">
-            <div className="navbar max-w-7xl mx-auto z-10 ">
+        <div className="navbar font-Fira">
+            <div className="navbar max-w-[1280px] mx-auto z-10 ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -35,14 +36,14 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <a className="text-2xl font-extrabold">
-                            <span className="text-[#9400D3] ">Harbor</span>
+                        <a className="text-4xl font-extrabold font-Lobster">
+                            <span className="text-[#6fbb8c] ">Harbor</span>
                             <span className="text-[#FF7F00] ml-1 ">Crafts</span>
                         </a>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-lg font-bold gap-4 ">
+                    <ul className="menu menu-horizontal px-1 text-lg font-semibold gap-4 ">
                         {navLinks}
                     </ul>
                 </div>
