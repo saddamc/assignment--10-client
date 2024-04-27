@@ -24,7 +24,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar font-Fira">
+        <div className="navbar font-Fira bg-[#ffba00]">
             <div className="navbar max-w-[1280px] mx-auto z-10 ">
                 <div className="navbar-start">
                     <div className="dropdown">
