@@ -11,7 +11,8 @@ const Login = () => {
         document.title = `HARBOR | LOGIN`;
     })
 
-    const { loginIn } = useContext(AuthContext);
+
+    const { loginIn, loginGoogle, loginGithub } = useContext(AuthContext);
 
     const [loginError, setLoginError] = useState('');
     const [success, setSuccess] = useState('');
@@ -54,9 +55,57 @@ const Login = () => {
                     footer: (error.message.slice(9, 41))
                 });
             })
-
-
     }
+
+    const handleGoogleLogin = () => {
+        loginGithub()
+            .then(result => {
+                console.log(result.user)
+                Swal.fire({
+                    icon: "success",
+                    title: "Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                    footer: (error.message.slice(9, 41))
+                });
+            })
+    }
+
+    const handleGithubLogin = () => {
+        loginGoogle()
+            .then(result => {
+                console.log(result.user)
+                Swal.fire({
+                    icon: "success",
+                    title: "Login Successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error)
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Something went wrong!",
+                    footer: (error.message.slice(9, 41))
+                });
+            })
+    }
+
+
+
+
 
 
 
@@ -98,7 +147,7 @@ const Login = () => {
                             <br />
 
                         </div>
-                        <div className="form-control mt-1">
+                        <div className="form-control mt-1 border-none shadow-lg shadow-slate-100">
                             <button className="btn btn-neutral border-none font-bold text-lg uppercase hover:bg-green-500 hover:text-black
                             
                             ">Login</button>
@@ -112,17 +161,17 @@ const Login = () => {
                         success && <p className="text-green-600 mx-auto mb-2">{success}</p>
                     }
 
+                    <p className="divider text-sm font-bold text-center justify-center ">Continue with</p>
+                    <div className="  min-w-[255px] min-h-[45px] items-center rounded-md mx-auto mb-10 space-y-2 justify-center text-center">
 
-                    <div className="  min-w-[255px] min-h-[45px] items-center pt-1 rounded-md mx-auto mb-10 space-y-2 justify-center text-center">
-
-                        <div className="flex gap-4 justify-center">
-                            <div>
-                                <button className="bg-yellow-700 px-2 py-1 font-semibold text-white rounded-md flex items-center">
+                        <div className="flex gap-4 justify-center ">
+                            <div className="text-xl shadow-lg shadow-slate-100">
+                                <button onClick={handleGoogleLogin} className="bg-yellow-700 w-[120px] h-[40px] px-2 py-1 font-semibold text-white rounded-md flex justify-center text-center items-center hover:bg-green-500 hover:text-black">
                                     <FcGoogle></FcGoogle>
                                     <span className="ml-1">Google</span></button>
                             </div>
-                            <div>
-                                <button className="bg-slate-600 px-2 py-1 font-semibold text-white rounded-md flex items-center">
+                            <div className="text-xl shadow-lg shadow-slate-100">
+                                <button onClick={handleGithubLogin} className="bg-slate-600 w-[120px] h-[40px] px-2 py-1 font-semibold text-white rounded-md flex justify-center text-center items-center hover:bg-green-500 hover:text-black">
                                     <FaGithub></FaGithub>
                                     <span className="ml-1">GitHub</span></button>
                             </div>

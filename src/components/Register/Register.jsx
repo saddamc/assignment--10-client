@@ -149,7 +149,7 @@ const Register = () => {
                                 <label htmlFor="terms">Accept our Terms & Condition</label>
                             </div>
                         </div>
-                        <div className="form-control mt-1">
+                        <div className="form-control mt-1 shadow-lg shadow-slate-100">
                             <button className="btn btn-neutral border-none font-bold text-lg uppercase hover:bg-green-500 hover:text-black
                             
                             ">Register</button>

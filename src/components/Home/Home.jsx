@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import HomesSlider from "../Slider/HomesSlider";
+import Product from "../Product/Product";
 
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
     return (
         <div>
             <HomesSlider></HomesSlider>
+            <Product></Product>
 
 
         </div>

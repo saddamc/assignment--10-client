@@ -15,6 +15,7 @@ import Product from './components/Product/Product.jsx';
 import AddProduct from './components/AddProduct/AddProduct.jsx';
 import MyCart from './components/MyCart/MyCart.jsx';
 import PrivateRoute from './components/Routes/PrivateRoute.jsx';
+import DetailsProduct from './components/Product/DetailsProduct.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: '/mycart',
         element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+      },
+      {
+        path: '/products/:id',
+        element: <PrivateRoute><DetailsProduct></DetailsProduct></PrivateRoute>,
+        loader: () => fetch('/Product.json')
       },
       {
         path: '/register',

@@ -39,7 +39,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar font-Fira bg-[#ffba00] shadow-lg">
+        <div className="navbar font-Fira  z-10 bg-[#ffba00] drop-shadow-lg">
             <div className="navbar max-w-[1280px] mx-auto z-10 ">
                 <div className="navbar-start">
                     <div className="dropdown">
