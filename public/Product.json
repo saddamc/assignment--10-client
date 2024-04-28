@@ -8,7 +8,7 @@
       "availability": "In stock",
       "image": ["https://i.ibb.co/wyzCKzj/1-1.jpg", "https://i.ibb.co/qrvxtLD/1-2.jpg", "https://i.ibb.co/LJGDc0M/1-3.jpg", "https://i.ibb.co/jL7KM6M/1-4.jpg", "https://i.ibb.co/MS2Bx3b/1-5.jpg" ],
       "rating": 4.5,
-      "processing_time": "Ready",
+      "processing_time": "Ready for Delivery",
       "stockStatus": "In stock"
     },
     {
@@ -19,7 +19,7 @@
       "price": "$150.00",
       "availability": "Available for pre-order",
       "image": ["https://i.ibb.co/q7rQ3nR/2-1.jpg", "https://i.ibb.co/4fh6V9Y/2-2.jpg", "https://i.ibb.co/8dCX4bP/2-3.jpg"],
-      "rating": 4.0,
+      "rating": 4.1,
       "processing_time": "3-4 weeks",
       "stockStatus": "Made to Order"
     },
@@ -32,7 +32,7 @@
       "availability": "In stock",
       "image": ["https://i.ibb.co/xF999zd/3-1.jpg", "https://i.ibb.co/XXPZVfZ/3-2.jpg", "https://i.ibb.co/F75xjhB/3-3.jpg", "https://i.ibb.co/qJkw8BN/3-4.jpg"],
       "rating": 4.2,
-      "processing_time": "Ready",
+      "processing_time": "Ready for Delivery",
       "stockStatus": "In stock"
     },
     {
@@ -56,7 +56,7 @@
       "availability": "In stock",
       "image": ["https://i.ibb.co/s1WZ2hn/5-1.jpg", "https://i.ibb.co/Gp8tnJj/5-2.jpg", "https://i.ibb.co/cwk1BZv/5-3.jpg"],
       "rating": 4.6,
-      "processing_time": "Ready",
+      "processing_time": "Ready for Delivery",
       "stockStatus": "In stock"
     },
     {
@@ -80,7 +80,7 @@
       "availability": "In stock",
       "image": ["https://i.ibb.co/BqkJHCh/7-2.jpg", "https://i.ibb.co/G0mz1Nz/7-1.jpg", "https://i.ibb.co/cCW85GH/7-3.jpg"],
       "rating": 4.1,
-      "processing_time": "Ready",
+      "processing_time": "Ready for Delivery",
       "stockStatus": "In stock"
     },
     {
@@ -104,7 +104,7 @@
       "availability": "In stock",
       "image": ["https://i.ibb.co/g7SWxJd/9-1.jpg", "https://i.ibb.co/XWV39wg/9-2.jpg", "https://i.ibb.co/L9Cyqp1/9-3.jpg"],
       "rating": 4.5,
-      "processing_time": "Ready",
+      "processing_time": "Ready for Delivery",
       "stockStatus": "In stock"
     },
     {
@@ -128,7 +128,7 @@
       "availability": "In stock",
       "image": ["https://i.ibb.co/3s0hK0h/11-1.jpg", "https://i.ibb.co/7kgyCRX/11-2.jpg", "https://i.ibb.co/9wvs6gV/11-3.jpg"],
       "rating": 4.3,
-      "processing_time": "Ready",
+      "processing_time": "Ready for Delivery",
       "stockStatus": "In stock"
     },
     {

@@ -5,8 +5,8 @@ const Products = ({ products }) => {
     const { id, name, image, price, rating } = products;
     return (
         <div>
-            <div className="card glass font-Fira shadow-gray-600 w-[600px] h-[650px] shadow-lg">
-                <figure><img className=' w-[550px] h-[450px] mt-12 ' src={image} alt="car!" /></figure>
+            <div className="card glass font-Fira shadow-gray-600 w-[420px] h-[550px] shadow-lg pt-3">
+                <figure><img className=' w-[400px] h-[350px]' src={image} alt="car!" /></figure>
                 <div className="card-body">
                     <h2 className="card-title opacity-50">{name}</h2>
                     <div className="rating">
