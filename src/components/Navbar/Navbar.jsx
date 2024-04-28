@@ -21,20 +21,25 @@ const Navbar = () => {
         <li className="bg-rgb(255,81,70)"> <NavLink to="/product">Product</NavLink> </li>
 
         {
-            user &&
-            <>
-                <li className="bg-rgb(255,81,70)"> <NavLink to="/addproduct">Add Product</NavLink> </li>
-                <li className=""> <NavLink to="/mycart">My Cart</NavLink> </li>
+            user ?
+                <>
+                    <li className="bg-rgb(255,81,70)"> <NavLink to="/addproduct">Add Product</NavLink> </li>
+                    <li className=""> <NavLink to="/mycart">My Cart</NavLink> </li>
+                </>
+                :
+                <>
+                    <li> <NavLink to="/login">Login</NavLink> </li>
+                    <li> <NavLink to="/Register">Register</NavLink> </li>
+                </>
 
-            </>
+
         }
 
-        <li> <NavLink to="/login">Login</NavLink> </li>
-        <li> <NavLink to="/Register">Register</NavLink> </li>
+
     </>
 
     return (
-        <div className="navbar font-Fira bg-[#ffba00]">
+        <div className="navbar font-Fira bg-[#ffba00] shadow-lg">
             <div className="navbar max-w-[1280px] mx-auto z-10 ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -65,10 +70,10 @@ const Navbar = () => {
                             <div className="flex items-center">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                                        <img alt={user.photoURL} src={user.photoURL} />
                                     </div>
                                 </div>
-                                <button onClick={handleLogout} className="login-button p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
+                                <button onClick={handleLogout} className="login-button ml-2 p-2 rounded-md text-white font-semibold bg-black text-sm hover:bg-red-500 hover:rounded-md">Sign Out</button>
                             </div>
                         </Link>
 
