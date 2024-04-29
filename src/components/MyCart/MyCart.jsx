@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 
-const MyCart = ({ cart }) => {
-    const { name, email, product, time, price, rating, category, image, customization, stock, details, gender } = cart;
+const MyCart = ({ product }) => {
+    const { name, email, productname, time, price, rating, category, image, customization, stock, details, gender } = product;
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-            <figure><img src={image} alt="Movie" /></figure>
+        <div className="card card-side bg-base-100 shadow-xl ">
+            <figure><img className='w-[300px] h-[300px] ' src={image} alt="Movie" /></figure>
             <div className="card-body">
-                <h2 className="card-title">New movie is released!</h2>
-                <p>Click the button to watch on Jetflix app.</p>
+                <h2 className="card-title">{productname} </h2>
+                <p> {details} </p>
+                <p>Available: {stock}</p>
+                <p className='text-xl font-bold'>Price: {price} </p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Watch</button>
+                    <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white">Details</button>
                 </div>
             </div>
         </div>

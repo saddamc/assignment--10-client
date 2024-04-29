@@ -11,7 +11,7 @@ const AddProduct = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
-        const product = form.product.value;
+        const productname = form.productname.value;
         const time = form.time.value;
         const price = form.price.value;
         const rating = form.rating.value;
@@ -23,7 +23,7 @@ const AddProduct = () => {
         const gender = form.gender.value;
 
 
-        const newProduct = { name, email, product, time, price, rating, category, image, customization, stock, details, gender }
+        const newProduct = { name, email, productname, time, price, rating, category, image, customization, stock, details, gender }
 
         console.log(newProduct);
 
@@ -86,7 +86,7 @@ const AddProduct = () => {
                                 <span className="label-text">Product Name</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="product" placeholder="Product Name"
+                                <input type="text" name="productname" placeholder="Product Name"
                                     className="input input-bordered w-full" />
                             </label>
 
