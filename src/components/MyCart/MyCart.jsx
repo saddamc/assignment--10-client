@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const MyCart = ({ product, cartProduct, setCartProduct }) => {
-    const { _id, name, email, productname, time, price, rating, category, image, customization, stock, details, gender } = product;
+    const { _id, productname, price, image, stock, details } = product;
 
     const handleDelete = _id => {
         console.log(_id);
@@ -21,7 +21,7 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/product/${_id}`, {
+                fetch(`https://assignment-10-server-seven-kappa.vercel.app/product/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -44,7 +44,7 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
 
     return (
         <div className="card card-side bg-base-100 shadow-xl ">
-            <figure><img className='w-[300px] h-[300px] ' src={image} alt="Movie" /></figure>
+            <figure><img className='w-[310px] h-[310px] ' src={image} alt="Movie" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{productname} </h2>
                 <p> {details} </p>
@@ -68,4 +68,10 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
 export default MyCart;
 MyCart.propTypes = {
     product: PropTypes.object
+}
+MyCart.propTypes = {
+    cartProduct: PropTypes.object
+}
+MyCart.propTypes = {
+    setCartProduct: PropTypes.object
 }

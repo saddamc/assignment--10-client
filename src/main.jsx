@@ -16,7 +16,6 @@ import AddProduct from './components/AddProduct/AddProduct.jsx';
 import PrivateRoute from './components/Routes/PrivateRoute.jsx';
 import DetailsProduct from './components/Product/DetailsProduct.jsx';
 import Cart from './components/MyCart/Cart.jsx';
-import CartDetails from './components/MyCart/CartDetails.jsx';
 import UpdateCart from './components/MyCart/UpdateCart.jsx';
 
 const router = createBrowserRouter([
@@ -53,17 +52,17 @@ const router = createBrowserRouter([
       {
         path: '/mycart',
         element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/product'),
+        loader: () => fetch('https://assignment-10-server-seven-kappa.vercel.app/product'),
       },
       {
         path: '/updatecart/:id',
         element: <PrivateRoute><UpdateCart></UpdateCart></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
+        loader: ({ params }) => fetch(`https://assignment-10-server-seven-kappa.vercel.app/product/${params.id}`),
       },
       // {
       //   path: '/cartdetails/:id',
       //   element: <PrivateRoute><CartDetails></CartDetails></PrivateRoute>,
-      //   loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
+      //   loader: ({ params }) => fetch(`https://assignment-10-server-seven-kappa.vercel.app/product/${params.id}`),
       // },
     ]
   },

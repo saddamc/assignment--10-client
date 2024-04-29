@@ -28,7 +28,7 @@ const AddProduct = () => {
         console.log(newProduct);
 
         // send data to ther server
-        fetch('http://localhost:5000/product', {
+        fetch('https://assignment-10-server-seven-kappa.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

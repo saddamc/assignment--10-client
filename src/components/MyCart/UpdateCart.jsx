@@ -6,7 +6,7 @@ import { useLoaderData } from "react-router-dom";
 const UpdateCart = () => {
 
     const product = useLoaderData();
-    const { _id, name, email, productname, time, price, rating, category, image, customization, stock, details, gender } = product;
+    const { name, email, productname, time, price, rating, category, image, customization, stock, details, gender } = product;
 
     const handleUpdateProduct = event => {
         event.preventDefault();
