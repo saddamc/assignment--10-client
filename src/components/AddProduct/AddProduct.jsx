@@ -201,7 +201,7 @@ const AddProduct = () => {
 
                     <div className="flex items-center text-red-500">
                         <p> <IoArrowRedo />  </p>
-                        <input type="submit" value="Add Coffee" className="btn w-[98%] border-none text-2xl bg-[#FFCC1D] text-white " />
+                        <input type="submit" value="Add Product" className="btn w-[98%] border-none text-2xl bg-[#FFCC1D] text-white " />
                         <p> <IoArrowUndo />  </p>
                     </div>
                 </form>
