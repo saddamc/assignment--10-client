@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const navLinks = <>
         <li className="bg-rgb(255,81,70)"> <NavLink to="/">Home</NavLink> </li>
-        <li className="bg-rgb(255,81,70)"> <NavLink to="/product">Product</NavLink> </li>
+        <li className="bg-rgb(255,81,70)"> <NavLink to="/productlist">Product</NavLink> </li>
 
         {
             user ?
