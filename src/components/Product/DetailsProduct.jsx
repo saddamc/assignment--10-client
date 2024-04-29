@@ -79,12 +79,12 @@ const DetailsProduct = () => {
                         <button className="flex font-Fira items-center text-center justify-center bg-[#FFCC1D] p-2 w-[280px] h-[50px] text-lg font-bold hover:bg-black hover:text-white "> <span className="mr-2 font-bold"> <BsCart3></BsCart3> </span> Add To Cart</button>
                         <button className="flex font-Fira items-center text-center justify-center bg-black text-white p-2  w-[280px] h-[50px] text-lg font-bold hover:bg-[#FFCC1D] hover:text-black "> <span className="mr-2 font-bold"> <IoArrowRedoSharp></IoArrowRedoSharp> </span> Buy it now</button>
                     </div>
-                    <div className="lg:flex gap-2">
+                    <div className="lg:flex gap-2  pt-24 ">
                         <div>
-                            <figure><img className="w-[350px] h-[400px] border-[2px] p-2" src={products.image.slice(3)} alt="" /></figure>
+                            <figure><img className="w-[350px] h-[400px] border-[2px] p-6" src={products.image.slice(3)} alt="image coming soon" /></figure>
                         </div>
                         <div>
-                            <figure><img className="w-[350px] h-[400px] border-[2px] p-2" src={products.image.slice(4)} alt="" /></figure>
+                            <figure><img className="w-[350px] h-[400px] border-[2px] p-6" src={products.image.slice(4)} alt="image coming soon" /></figure>
                         </div>
                     </div>
                 </div>
