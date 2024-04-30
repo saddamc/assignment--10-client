@@ -98,7 +98,7 @@ const Register = () => {
 
 
     return (
-        <div className="font-Roboto bg-slate-200 h-[1000px] mx-auto lg:w-[1280px] md:w-[750px] ">
+        <div className="font-Roboto h-[1000px] mx-auto lg:w-[1280px] md:w-[750px] ">
             <div className="hero-content flex-col pt-24 ">
                 <div className="card  shrink-0 w-full max-w-sm shadow-2xl bg-[#ffba00] ">
                     <div className="items-center text-center mt-12 ">

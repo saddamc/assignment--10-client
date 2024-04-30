@@ -14,5 +14,16 @@ export default {
     },
   },
   plugins: [require("daisyui")],
+ 
+  //...
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+    daisyui: {
+    themes: ["light", "synthwave"],
+  },
+  },
+
 }
+
+
 

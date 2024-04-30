@@ -58,7 +58,7 @@ const Login = () => {
     }
 
     const handleGoogleLogin = () => {
-        loginGithub()
+        loginGoogle()
             .then(result => {
                 console.log(result.user)
                 Swal.fire({
@@ -81,7 +81,7 @@ const Login = () => {
     }
 
     const handleGithubLogin = () => {
-        loginGoogle()
+        loginGithub()
             .then(result => {
                 console.log(result.user)
                 Swal.fire({
@@ -110,7 +110,7 @@ const Login = () => {
 
 
     return (
-        <div className="font-Roboto bg-slate-200 h-[1000px] mx-auto lg:w-[1280px] md:w-[750px] ">
+        <div className="font-Roboto  h-[1000px] mx-auto lg:w-[1280px] md:w-[750px] ">
             <div className="hero-content flex-col pt-24  ">
 
                 <div className="card  shrink-0 w-full max-w-sm shadow-2xl bg-[#ffba00] ">
