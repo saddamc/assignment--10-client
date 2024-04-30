@@ -51,7 +51,11 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
                 <p>Available: {stock}</p>
                 <p className='text-xl font-bold'>Price: {price} </p>
                 <div className="card-actions justify-end space-x-2">
-                    <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"> <TiEye /> </button>
+                    {/* button */}
+
+                    <Link to={`/cartdetails/${_id}`}>
+                        <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"> <TiEye /> </button>
+                    </Link>
                     <Link to={`/updatecart/${_id}`}>
                         <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"><FaRegEdit /> </button>
                     </Link>

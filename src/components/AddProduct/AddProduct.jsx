@@ -165,7 +165,7 @@ const AddProduct = () => {
                                 <span className="label-text">Stock Abailable (STOCK/ORDER) </span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="stock" placeholder="Image Url"
+                                <input type="text" name="stock" placeholder="Stock / Order"
                                     className="input input-bordered w-full" />
                             </label>
 
