@@ -21,7 +21,7 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://assignment-10-server-seven-kappa.vercel.app/product/${_id}`, {
+                fetch(`http://localhost:5000/product/${_id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -50,12 +50,13 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
                 <p> {details} </p>
                 <p>Available: {stock}</p>
                 <p className='text-xl font-bold'>Price: {price} </p>
-                <div className="card-actions justify-end space-x-4">
-                    <Link to={`/product/${_id}`}>
-                        <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"><TiEye /> </button>
+                <div className="card-actions justify-end space-x-2">
+                    <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"> <TiEye /> </button>
+                    <Link to={`/updatecart/${_id}`}>
+                        <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"><FaRegEdit /> </button>
                     </Link>
 
-                    <button className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"> <FaRegEdit /> </button>
+
                     <button onClick={() => handleDelete(_id)} className="btn btn-primary bg-[#ffba00] text-black font-bold border-none text-lg hover:text-white"><MdDeleteForever /> </button>
 
 
@@ -68,10 +69,4 @@ const MyCart = ({ product, cartProduct, setCartProduct }) => {
 export default MyCart;
 MyCart.propTypes = {
     product: PropTypes.object
-}
-MyCart.propTypes = {
-    cartProduct: PropTypes.object
-}
-MyCart.propTypes = {
-    setCartProduct: PropTypes.object
 }

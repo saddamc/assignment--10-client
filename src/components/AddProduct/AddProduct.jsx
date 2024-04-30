@@ -28,7 +28,7 @@ const AddProduct = () => {
         console.log(newProduct);
 
         // send data to ther server
-        fetch('https://assignment-10-server-seven-kappa.vercel.app/product', {
+        fetch('http://localhost:5000/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -47,9 +47,9 @@ const AddProduct = () => {
     }
 
     return (
-        <div className=" p-24 font-Fira max-w-7xl mx-auto">
+        <div className=" lg:p-24 md:p-12  font-Fira max-w-7xl mx-auto">
 
-            <div className="bg-slate-300 p-10 rounded-lg shadow-lg shadow-blue-300">
+            <div className="bg-slate-300 lg:p-10 md:p-10 rounded-lg shadow-lg shadow-blue-300">
                 <form onSubmit={handleAddProduct}>
                     <div className="bg-[#FFCC1D] p-2 mb-4 rounded-lg flex justify-center items-center text-center gap-2 text-3xl font-extrabold">
                         <p className="text-white "><BsPersonFillAdd></BsPersonFillAdd></p>
@@ -57,7 +57,7 @@ const AddProduct = () => {
                         <p>Your Product</p>
                     </div>
                     {/* user name and Email */}
-                    <div className="flex mb-8">
+                    <div className=" lg:flex md:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">User Name</span>
@@ -80,7 +80,7 @@ const AddProduct = () => {
                         </div>
                     </div>
                     {/* form name and Processing Time*/}
-                    <div className="flex mb-8">
+                    <div className="flex lg:flex md:flex mb-8">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Product Name</span>
@@ -103,7 +103,7 @@ const AddProduct = () => {
                         </div>
                     </div>
                     {/* form price & rating */}
-                    <div className="flex mb-8 ">
+                    <div className="flex lg:flex md:flex mb-8 ">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Price</span>
@@ -126,7 +126,7 @@ const AddProduct = () => {
                         </div>
                     </div>
                     {/* form category and image  */}
-                    <div className="flex mb-8 ">
+                    <div className="flex lg:flex md:flex mb-8 ">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Category</span>
@@ -149,7 +149,7 @@ const AddProduct = () => {
                         </div>
                     </div>
                     {/* form customazation & stock  */}
-                    <div className="flex mb-8 ">
+                    <div className="flex lg:flex md:flex mb-8 ">
                         <div className="form-control md:w-1/2">
                             <label className="label">
                                 <span className="label-text">Customization (YES/NO)</span>

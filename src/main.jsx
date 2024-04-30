@@ -52,18 +52,14 @@ const router = createBrowserRouter([
       {
         path: '/mycart',
         element: <PrivateRoute><Cart></Cart></PrivateRoute>,
-        loader: () => fetch('https://assignment-10-server-seven-kappa.vercel.app/product'),
+        loader: () => fetch('http://localhost:5000/product'),
       },
       {
         path: '/updatecart/:id',
         element: <PrivateRoute><UpdateCart></UpdateCart></PrivateRoute>,
-        loader: ({ params }) => fetch(`https://assignment-10-server-seven-kappa.vercel.app/product/${params.id}`),
+        loader: ({ params }) => fetch(`http://localhost:5000/product/${params.id}`),
       },
-      // {
-      //   path: '/cartdetails/:id',
-      //   element: <PrivateRoute><CartDetails></CartDetails></PrivateRoute>,
-      //   loader: ({ params }) => fetch(`https://assignment-10-server-seven-kappa.vercel.app/product/${params.id}`),
-      // },
+
     ]
   },
 ]);

@@ -1,17 +1,19 @@
 import { BsPersonFillAdd } from "react-icons/bs";
 import { IoArrowRedo, IoArrowUndo } from "react-icons/io5";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const UpdateCart = () => {
 
     const product = useLoaderData();
-    const { name, email, productname, time, price, rating, category, image, customization, stock, details, gender } = product;
+    const { _id, name, email, productname, time, price, rating, category, image, customization, stock, details, gender } = product;
 
     const handleUpdateProduct = event => {
         event.preventDefault();
 
         const form = event.target;
+
         const name = form.name.value;
         const email = form.email.value;
         const productname = form.productname.value;
@@ -29,7 +31,28 @@ const UpdateCart = () => {
 
         console.log(updateProduct);
 
+        // send data to the server
+        fetch(`http://localhost:5000/product/${_id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateProduct)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: "Good job!",
+                        text: "Product Updated Successfully !",
+                        icon: "success"
+                    });
+                }
+
+            })
     }
+
 
 
     return (
